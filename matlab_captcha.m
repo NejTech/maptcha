@@ -17,4 +17,4 @@ ltr4 = gen_char('j', light1, dark2);
 
 result = [ltr1, ltr2, ltr3, ltr4];
 
-encode_base64(result);
+encode_base64(result)
