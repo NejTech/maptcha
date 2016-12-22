@@ -11,7 +11,7 @@
 % generate palette of colors
 [ light1, light2, dark1, dark2 ] = random_palette;
 
-possible_letters = 'ABCDEFHKLMNPRSTUVXYZabcdefkmnrstuvwxyz23456789';
+possible_letters = 'ABCDEFHKLMNPRSTUVXYZabcdekmnrstuvwxyz23456789';
 
 % generate the captcha letters
 ltr1 = gen_char(possible_letters(round(rand*length(possible_letters))), dark1, light1, dark2);

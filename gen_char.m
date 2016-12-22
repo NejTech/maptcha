@@ -15,8 +15,14 @@ fnplt(cscvn([start_point, middle_point, end_point]),4);
 conf_axis = setdiff(findall(gca), gca_before);
 set(conf_axis, 'Color', confusion);
 
+% adjust the padding if the letter is uppercase (> 64 on the ASCII table)
+letterpos = [45 46];
+if letter > 64
+    letterpos = [45 50];
+end
+
 % generate text
-text('units','pixels','position',[45 46],'fontsize',55,'color',foreground,'string',letter,'rotation',270);
+text('units','pixels','position',letterpos,'fontsize',55,'color',foreground,'string',letter,'rotation',270);
 axis off
 grid off
 
