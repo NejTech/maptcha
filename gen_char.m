@@ -2,11 +2,11 @@ function cdata = gen_char( letter, foreground, background, confusion )
 %GEN_CHAR Generate a small image of a given character and return the data
 
 % prepare a hidden figure with given background
-figure('menubar','none','color',background,'position',[100,100,100,80],'visible','off');
+f = figure('menubar','none','color',background,'position',[100,100,100,80],'visible','off');
 
 % generate random continuous curve to confuse OCR
 start_point = [rand; 0];
-middle_point = [rand; 0.5];
+middle_point = [(rand / 2) + 0.25; 0.5];
 end_point = [rand; 1];
 % because fnplt does not accept the standard color argument, we need to
 % manually find the handle and change its color...
