@@ -11,7 +11,7 @@
 % generate palette of colors
 [ light1, light2, dark1, dark2 ] = random_palette;
 
-possible_letters = 'ABCDEFHKLMNPRSTUVXYZabcdekmnrstuvwxyz23456789';
+possible_letters = 'ABCDEFHKLMNPRSTUVXYZabcdekmnrstuvwxz23456789';
 captcha_code = [ ...
     possible_letters(round(rand*length(possible_letters))), ...
     possible_letters(round(rand*length(possible_letters))), ...
@@ -25,10 +25,10 @@ ltr3 = gen_char(captcha_code(3), dark2, light2, dark1);
 ltr4 = gen_char(captcha_code(4), light1, dark2, light2);
 
 % make sure they are the same size (thx, MATLAB)
-ltr1 = ltr1(1:85,1:50,1:3);
-ltr2 = ltr2(1:85,1:50,1:3);
-ltr3 = ltr3(1:85,1:50,1:3);
-ltr4 = ltr4(1:85,1:50,1:3);
+ltr1 = ltr1(1:60,1:49,1:3);
+ltr2 = ltr2(1:60,1:49,1:3);
+ltr3 = ltr3(1:60,1:49,1:3);
+ltr4 = ltr4(1:60,1:49,1:3);
 
 % concat them to an image and encode it to base64 JPG
 result = [ltr1, ltr2, ltr3, ltr4];
