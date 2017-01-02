@@ -11,6 +11,11 @@
 % generate palette of colors
 [ light1, light2, dark1, dark2 ] = random_palette;
 
+% reset the seed of rand because when running in a compiled environment,
+% rand is initialized to the same state on each launch and that can
+% cause it to generate the same code each time MAPTCHA is run
+reset(RandStream.getGlobalStream,sum(100*clock));
+
 possible_letters = 'ABCDEFHKLMNPRSTUVXYZabcdekmnrstuvwxz23456789';
 captcha_code = [ ...
     possible_letters(round(rand*length(possible_letters))), ...
