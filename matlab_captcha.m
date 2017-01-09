@@ -29,7 +29,8 @@ ltr2 = gen_char(captcha_code(2), light1, dark1, light2);
 ltr3 = gen_char(captcha_code(3), dark2, light2, dark1);
 ltr4 = gen_char(captcha_code(4), light1, dark2, light2);
 
-% make sure they are the same size (thx, MATLAB)
+% crop them to the same size (compiled MATLAB environment
+% does not guarantee it)
 ltr1 = ltr1(1:60,1:49,1:3);
 ltr2 = ltr2(1:60,1:49,1:3);
 ltr3 = ltr3(1:60,1:49,1:3);

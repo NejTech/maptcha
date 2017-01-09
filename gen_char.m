@@ -8,8 +8,9 @@ f = figure('menubar','none','color',background,'position',[100,100,100,80],'visi
 start_point = [rand; 0];
 middle_point = [(rand / 2) + 0.25; 0.5];
 end_point = [rand; 1];
+
 % because fnplt does not accept the standard color argument, we need to
-% manually find the handle and change its color...
+% manually find the handle and change its color, otherwise it will be red
 gca_before = findall(gca);
 fnplt(cscvn([start_point, middle_point, end_point]),4);
 conf_axis = setdiff(findall(gca), gca_before);

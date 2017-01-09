@@ -1,5 +1,5 @@
 function [ base64string ] = encode_base64( cdata )
-%ENCODE_BASE64 encodes a MATLAB image matrix as jpeg in base64
+% ENCODE_BASE64 encodes a MATLAB image matrix as jpeg in base64
 %
 % string = base64img(cdata)
 

@@ -1,5 +1,5 @@
 function y = base64_legacy(x, alg, isChunked, url_safe)
-%BASE64_LEGACY Alternative for matlab.net.base64encode where not supported
+% BASE64_LEGACY Alternative for matlab.net.base64encode where not supported
 % taken from:
 % BASE64ENCODE Perform base64 encoding on a string.
 % INPUT:
